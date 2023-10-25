@@ -2,6 +2,7 @@
 
 .visual {
   height: 63.7rem;
+  /* aspect-ratio: 1/0.3317708333333333; */
   position: relative;
   padding: 0 !important;
 }
@@ -22,6 +23,7 @@
   transform: translate(-50%, -50%);
   /* background: #5f5; */
   width: 114rem;
+  width: 59.375%;
   color: #fff;
   text-align: center;
 }
@@ -33,6 +35,7 @@
 }
 .visual .visual-title p {
   width: 60rem;
+  width: 52.6316%;
   margin: 1rem auto 0;
   font-weight: 500;
 }
@@ -148,12 +151,14 @@
 
 .work-con {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin-top: 4.3rem;
 }
 
 .work-con .work-best {
-  width: 48rem;
+  flex: 1 1 35%;
+  min-width: 48rem;
 }
 
 .work-con .work-best h4 {
@@ -168,14 +173,15 @@
 }
 
 .work-con .work-list {
-  width: 68rem;
+  flex: 1 1 55%;
+  /* min-width: 68rem; */
   display: flex;
   flex-wrap: wrap; /* fxww */
-  justify-content: space-between;
-  row-gap: 2rem;
+  gap: 2rem;
 }
 .work-con .work-list li {
-  width: 33rem;
+  flex: 1 1 45%;
+  min-width: 33rem;
   aspect-ratio: 1/0.7333333333333333;
 }
 .work-con .work-list li figure {
@@ -225,4 +231,28 @@
 .map iframe {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .about .inner {
+    width: 94.140625%;
+  }
+  .team .inner {
+    width: 100%;
+  }
+  .team .inner .team-list-wrap {
+    margin-left: 2.9297%;
+    border: 1px solid #f00;
+    overflow-x: scroll;
+  }
+
+  .team .inner .team-list-wrap .team-list li {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .work-con .work-best {
+    min-width: auto;
+  }
 }
