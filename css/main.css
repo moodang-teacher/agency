@@ -233,6 +233,13 @@
   height: 100%;
 }
 
+@media (max-width: 1180px) {
+  .work-con .work-list li {
+    flex: 1 1 20%;
+    min-width: 20rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .about .inner {
     width: 94.140625%;
@@ -253,6 +260,9 @@
 
 @media (max-width: 500px) {
   .work-con .work-best {
-    min-width: auto;
+    min-width: 100%;
+  }
+  .work-con .work-list li {
+    flex: 1 1 100%;
   }
 }
