@@ -1,0 +1,147 @@
+@charset 'utf-8';
+
+.visual {
+  height: 63.7rem;
+  position: relative;
+  padding: 0 !important;
+}
+.visual .video-wrap {
+  height: 100%;
+}
+.visual .video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ob */
+}
+
+.visual .visual-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  /* background: #5f5; */
+  width: 114rem;
+  color: #fff;
+  text-align: center;
+}
+
+.visual .visual-title h2 {
+  font-weight: 700;
+  font-size: 7.6rem;
+  color: var(--point-color);
+}
+.visual .visual-title p {
+  width: 60rem;
+  margin: 1rem auto 0;
+  font-weight: 500;
+}
+.visual .visual-title .btn-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21.4rem;
+  height: 5.4rem;
+  border: 1px solid var(--line-color-w);
+  border-radius: 50px;
+  font-weight: 700;
+  color: #fff;
+  /* m2.8r-a-0 */
+  margin: 2.8rem auto 0;
+}
+
+.visual .visual-title .btn-cta:hover {
+  background: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.visual::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#container section {
+  padding: 8rem 0 12rem;
+}
+
+.sec-title {
+  /* fw700+fz4r+c+tac */
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--title-color);
+  text-align: center;
+}
+
+.about .inner {
+  width: 88rem;
+}
+.about figure {
+  margin-top: 4.3rem;
+}
+.about p {
+  margin-top: 2.8rem;
+  text-align: center;
+}
+
+.team {
+  background: var(--main-color);
+  color: var(--point-color);
+  text-align: center;
+}
+
+.team .sec-title {
+  color: var(--point-color);
+}
+
+.team .team-list {
+  background: #5f5;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.team .team-list li {
+  border: 1px solid #000;
+  width: 28rem;
+  /* min-height: 33.1rem; */
+  padding: 0 2rem;
+}
+
+.team .team-list li figure {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team .team-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team .team-list li dl {
+  margin-top: 2rem;
+}
+.team .team-list li dl dt {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.team .team-list li dl dd {
+  font-size: 1.8rem;
+  margin-top: 0.8rem;
+}
+.team .btn-with {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* w21.1r+h5.4r+bd+bdrs50+m4.8-a-0 */
+  width: 21.1rem;
+  height: 5.4rem;
+  border: 1px solid var(--line-color-w);
+  border-radius: 50px;
+  margin: 4.8em auto 0;
+  font-weight: 700;
+}
