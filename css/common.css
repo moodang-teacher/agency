@@ -60,7 +60,7 @@ label {
 .inner {
   width: 118rem;
   margin: 0 auto;
-  background: rgba(255, 255, 0, 0.15);
+  /* background: rgba(255, 255, 0, 0.15); */
   position: relative;
   height: 100%;
 }
@@ -159,12 +159,44 @@ nav {
 
 /* 반응형 분기점 */
 @media (max-width: 1180px) {
+  .inner {
+    width: 94.1406%;
+  }
 }
 
 /* 태블릿 디자인 */
 @media (max-width: 1024px) {
 }
 
+/* 추가 분기점 생성 */
+@media (max-width: 800px) {
+  .gnb {
+    display: none;
+  }
+  .util {
+    display: flex;
+    gap: 1.2rem;
+  }
+  .btn-menu {
+    display: block;
+  }
+}
+
 /* 모바일 디자인 */
 @media (max-width: 500px) {
+  .inner {
+    width: 89.7436%; /* 350/390 */
+  }
+  nav {
+    height: 6.8rem;
+  }
+  .logo a {
+    width: 3rem;
+    height: 3.6rem;
+  }
+
+  .foot-con {
+    flex-direction: column;
+    gap: 2.8rem;
+  }
 }

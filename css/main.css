@@ -33,6 +33,7 @@
 }
 .visual .visual-title p {
   width: 60rem;
+  width: 52.6316%;
   margin: 1rem auto 0;
   font-weight: 500;
 }
@@ -100,13 +101,13 @@
 }
 
 .team .team-list {
-  background: #5f5;
+  /* background: #5f5; */
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
 }
 .team .team-list li {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 28rem;
   /* min-height: 33.1rem; */
   padding: 0 2rem;
@@ -154,6 +155,7 @@
 
 .work-con .work-best {
   width: 48rem;
+  width: 40.678%;
 }
 
 .work-con .work-best h4 {
@@ -163,12 +165,13 @@
   color: var(--title-color);
 }
 .work-con .work-best p {
-  font-weight: 1.8rem;
+  font-size: 1.8rem;
   margin-top: 0.8rem;
 }
 
 .work-con .work-list {
   width: 68rem;
+  width: 57.6271%;
   display: flex;
   flex-wrap: wrap; /* fxww */
   justify-content: space-between;
@@ -176,6 +179,7 @@
 }
 .work-con .work-list li {
   width: 33rem;
+  width: 48.5294%;
   aspect-ratio: 1/0.7333333333333333;
 }
 .work-con .work-list li figure {
@@ -219,10 +223,142 @@
 }
 
 .map {
-  height: 68rem;
+  /* height: 68rem; */
+  /* aspect-ratio: 1/0.3541666666666667; */
+
+  height: 35.4167vw;
   padding: 0 !important;
 }
 .map iframe {
   width: 100%;
   height: 100%;
+}
+
+/* 반응형 분기점 */
+@media (max-width: 1180px) {
+  .about .inner {
+    width: 94.1406%;
+  }
+  .visual .visual-title {
+    width: 90%;
+  }
+  .visual .visual-title h2 {
+    font-size: 6.2rem;
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  .visual {
+    height: 49rem;
+  }
+
+  .visual .visual-title h2 {
+    font-size: 4.8rem;
+  }
+  .visual .visual-title p {
+    width: 60rem;
+    width: 84.0336%;
+  }
+  .team .inner {
+    width: 100%;
+  }
+  .team .team-list {
+    margin-left: 3rem;
+    margin-left: 2.9297%;
+    overflow-x: auto;
+  }
+  .team .team-list li {
+    /* fxsh0 : 줄어들지마 */
+    flex-shrink: 0;
+  }
+  .work-con {
+    flex-wrap: wrap;
+    row-gap: 4.8rem;
+  }
+  .work-con .work-best {
+    width: 100%;
+  }
+  .work-con .work-list {
+    width: 100%;
+  }
+  .work-con .work-list li {
+    width: 23rem;
+    width: 23.8589%;
+  }
+  .form-wrap .form-inner {
+    width: 80%;
+  }
+  .map {
+    height: 84.6rem;
+    height: 82.6172vw;
+  }
+}
+
+/* 추가 분기점 생성 */
+@media (max-width: 800px) {
+  .visual .visual-title h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  .work-con .work-list li {
+    width: 48.5%;
+  }
+  .form-wrap .form-inner {
+    width: 100%;
+  }
+}
+
+/* 모바일 디자인 */
+@media (max-width: 500px) {
+  .visual {
+    height: 54rem;
+  }
+
+  .visual .visual-title h2 {
+    font-size: 3.2rem;
+  }
+  .visual .visual-title p {
+    font-size: 1.8rem;
+  }
+  .sec-title {
+    font-size: 3.2rem;
+  }
+
+  .about figure {
+    /* border: 1px solid #f00; */
+    aspect-ratio: 1/0.9142857142857143;
+  }
+  .about figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .team .team-list li dl dt {
+    font-size: 2rem;
+  }
+  .team .team-list li dl dd {
+    font-size: 1.6rem;
+  }
+  .work-con .work-list li {
+    width: 100%;
+  }
+  .form-wrap .form-inner {
+    width: 100%;
+  }
+  .form-wrap .form-inner input {
+    width: calc(100% - 8rem);
+    font-size: 1.4rem;
+  }
+  .form-wrap .form-inner button {
+    width: 8rem;
+    background: var(--main-color) url(../img/ico-send.svg) no-repeat 50%;
+  }
+  .form-wrap .form-inner button i {
+    display: none;
+  }
+  .map {
+    height: 135.3846vw; /* 528px */
+  }
 }
