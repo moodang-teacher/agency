@@ -268,6 +268,7 @@
 
   .work-con .work-best {
     grid-column: 1/5;
+    grid-row: 1/1;
   }
 
   .form-wrap .form-inner {
@@ -335,6 +336,11 @@
   .work-con {
     grid-template-columns: 1fr;
     gap: 2rem 0;
+  }
+
+  .work-con .work-best {
+    grid-column: 1/1;
+    grid-row: 1/1;
   }
 
   .form-wrap .form-inner {
