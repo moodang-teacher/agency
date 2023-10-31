@@ -148,14 +148,15 @@
 }
 
 .work-con {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4.3rem;
+  display: grid;
+  grid-template-columns: 40.678% auto auto;
+  /* grid-template-columns: 1.5fr 1fr 1fr; */
+  grid-auto-rows: minmax(24.2rem, auto);
+  gap: 2rem;
 }
 
 .work-con .work-best {
-  width: 48rem;
-  width: 40.678%;
+  grid-row: 1/3;
 }
 
 .work-con .work-best h4 {
@@ -169,24 +170,10 @@
   margin-top: 0.8rem;
 }
 
-.work-con .work-list {
-  width: 68rem;
-  width: 57.6271%;
-  display: flex;
-  flex-wrap: wrap; /* fxww */
-  justify-content: space-between;
-  row-gap: 2rem;
-}
-.work-con .work-list li {
-  width: 33rem;
-  width: 48.5294%;
-  aspect-ratio: 1/0.7333333333333333;
-}
-.work-con .work-list li figure {
-  width: 100%;
+.work-con .work-item figure {
   height: 100%;
 }
-.work-con .work-list li figure img {
+.work-con .work-item figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -272,20 +259,15 @@
     /* fxsh0 : 줄어들지마 */
     flex-shrink: 0;
   }
+
   .work-con {
-    flex-wrap: wrap;
-    row-gap: 4.8rem;
+    grid-template-columns: repeat(4, auto);
   }
+
   .work-con .work-best {
-    width: 100%;
+    grid-column: 1/5;
   }
-  .work-con .work-list {
-    width: 100%;
-  }
-  .work-con .work-list li {
-    width: 23rem;
-    width: 23.8589%;
-  }
+
   .form-wrap .form-inner {
     width: 80%;
   }
@@ -301,9 +283,15 @@
     font-size: 4rem;
     line-height: 1.2;
   }
-  .work-con .work-list li {
-    width: 48.5%;
+
+  .work-con {
+    grid-template-columns: 1fr 1fr;
   }
+
+  .work-con .work-best {
+    grid-column: 1/3;
+  }
+
   .form-wrap .form-inner {
     width: 100%;
   }
@@ -341,9 +329,12 @@
   .team .team-list li dl dd {
     font-size: 1.6rem;
   }
-  .work-con .work-list li {
-    width: 100%;
+
+  .work-con {
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
   }
+
   .form-wrap .form-inner {
     width: 100%;
   }
